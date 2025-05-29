@@ -1,8 +1,14 @@
 <template>
     <div
-        class="w-full h-fit flex justify-center items-start">
-        <div class="w-[80%]">
+        class="w-full h-fit flex flex-col justify-center items-center">
+        <div 
+            class="w-[90%] bg-white sticky top-0 z-30 transition duration-300"
+            :class="{
+                '-translate-y-full': !isVisible
+            }">
             <Navigation/>
+        </div>
+        <div class="w-[90%]">
             <NuxtPage/>
         </div>
     </div>
@@ -10,5 +16,41 @@
 
 <script setup lang="ts">
 
-import { Navigation } from '~/components/ui';
+import { 
+    Navigation 
+} from '~/components/ui';
+
+
+/**
+ * Begin::Declare variable section
+ */
+const route = useRoute();
+const isVisible: Ref<boolean> = ref<boolean>(true);
+let lastScrollY = 0;
+/**
+ * End::Declare variable section
+ */
+
+/**
+ * Begin::Some Logical section
+ */
+const isScrolled = ref(false)
+
+const handleScroll = () => {
+    const currentScrollY = window.scrollY
+    isVisible.value = currentScrollY < lastScrollY || currentScrollY < 10
+    isScrolled.value = currentScrollY > 10
+    lastScrollY = currentScrollY
+}
+/**
+ * End::Some Logical section
+ */
+
+onMounted(() => {
+   window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
 </script>

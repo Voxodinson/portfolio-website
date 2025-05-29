@@ -1,6 +1,10 @@
 <template>
     <div
         class="w-full flex items-center justify-between h-[100px]">
+        <h1
+            class=" text-[1.5rem] uppercase font-thin font-anton tracking-wider">
+            Outh Menghour
+        </h1>
         <div 
             class="hidden lg:flex">
             <ul 
@@ -22,10 +26,6 @@
                 </li>
             </ul>
         </div>
-        <h1
-            class=" text-[1.5rem] uppercase font-thin font-anton tracking-wider">
-            Outh Menghour
-        </h1>
         <div 
             class="hidden lg:flex">
             <ul 
