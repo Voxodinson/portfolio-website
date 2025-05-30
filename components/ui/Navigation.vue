@@ -61,11 +61,11 @@ const link_items = [
     },
     {
         label: 'about me',
-        to: '/about_me'
+        to: '/about'
     },
     {
         label: 'portfolio',
-        to: '/porrfolio'
+        to: '/portfolio'
     },
     {
         label: 'contact',
