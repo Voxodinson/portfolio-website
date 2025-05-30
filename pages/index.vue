@@ -50,7 +50,7 @@
                     <div 
                         class="h-[600px] w-[400px] overflow-hidden rounded-full border-[1px] border-gray-200">
                         <img 
-                            :src="MainImageCrop" 
+                            :src="UserImage" 
                             alt="image"
                             class="w-full h-full">
                     </div>
@@ -105,7 +105,7 @@
 
 <script setup lang="ts">
 import { 
-    MainImageCrop 
+    UserImage 
 } from '~/assets/images';
 import { 
     MyProject 
