@@ -106,11 +106,10 @@
 <script setup lang="ts">
 import { 
     MainImageCrop 
-} from '~/assets/images/indes';
+} from '~/assets/images';
 import { 
     MyProject 
 } from '~/components/ui';
-
 definePageMeta({
     colorMode: 'light'
 });
