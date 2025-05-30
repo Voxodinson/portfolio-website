@@ -103,10 +103,7 @@
 </template>
 
 <script setup lang="ts">
-import { 
-    MainImage,
-    MainImageCrop
-} from '~/assets/images';
+import MainImageCrop from '../assets/images/main_image_crop.jpg';
 definePageMeta({
     colorMode: 'light'
 });
