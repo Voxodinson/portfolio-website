@@ -108,6 +108,7 @@ import MainImageCrop from '@/assets/images/main_image_crop.jpg';
 import { 
     MyProject 
 } from '~/components/ui';
+
 definePageMeta({
     colorMode: 'light'
 });
