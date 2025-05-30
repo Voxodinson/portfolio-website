@@ -24,7 +24,6 @@ import {
 /**
  * Begin::Declare variable section
  */
-const route = useRoute();
 const isVisible: Ref<boolean> = ref<boolean>(true);
 let lastScrollY = 0;
 /**
