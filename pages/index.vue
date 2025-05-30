@@ -104,7 +104,9 @@
 </template>
 
 <script setup lang="ts">
-import MainImageCrop from '@/assets/images/main_image_crop.jpg';
+import { 
+    MainImageCrop 
+} from '~/assets/images/indes';
 import { 
     MyProject 
 } from '~/components/ui';
