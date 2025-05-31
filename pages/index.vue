@@ -50,7 +50,7 @@
                     <div 
                         class="h-[600px] w-[400px] overflow-hidden rounded-full border-[1px] border-gray-200">
                         <img 
-                            :src="UserImage" 
+                            :src="AtAngkorWat" 
                             alt="image"
                             class="w-full h-full">
                     </div>
@@ -105,7 +105,7 @@
 
 <script setup lang="ts">
 import { 
-    UserImage 
+    AtAngkorWat
 } from '~/assets/images';
 import { 
     MyProject 
