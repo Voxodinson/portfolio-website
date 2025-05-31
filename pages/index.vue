@@ -100,6 +100,25 @@
             </p>
         </div>
         <MyProject/>
+        <Education/>
+        <div 
+            class="w-full flex items-center justify-center flex-col py-12">
+            <h3
+                class="text-[1.5rem]">
+                Got a Vision? Let's Bring It to Life!
+            </h3>
+            <p>
+                I'm always excited to collaborate on new and innovative projects. Whether you're starting from scratch or refining an existing idea
+            </p>
+            <ULink
+                to="tel:067961719"
+                class="flex items-center gap-3 text-[1.2rem] underline mt-12">
+                Call me now
+                <UIcon
+                    name="material-symbols:phone-forwarded"
+                    class="w-6 h-6"/>
+            </ULink>
+        </div>
     </div>
 </template>
 
@@ -108,7 +127,9 @@ import {
     AtAngkorWat
 } from '~/assets/images';
 import { 
-    MyProject 
+    MyProject,
+    Experience,
+    Education
 } from '~/components/ui';
 definePageMeta({
     colorMode: 'light'
