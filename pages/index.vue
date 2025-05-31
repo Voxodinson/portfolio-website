@@ -2,13 +2,20 @@
     <div
         class="w-full">
         <div 
-            class="w-full flex h-[50vh] items-center justify-center">
+            class="w-full flex h-[50vh] flex-col items-center justify-center">
             <h1
                 class="text-center text-[3rem] uppercase font-semibold">
                 Outh Menghour <br>
                 End-to-End Web Development <br>
                 Based in Cambodia
             </h1>
+            <span
+                class="flex items-center gap-3 mt-6 text-[1.2rem] py-1 px-4 rounded-full bg-gray-100">
+                <UIcon
+                    name="svg-spinners:blocks-scale"
+                    class="w-4 h-4"/>
+                Portfolio
+            </span>
         </div>
         <div 
             class="w-full grid grid-cols-3 items-center pb-12">
@@ -17,28 +24,28 @@
                 <div 
                     class="flex flex-col">
                     <h3
-                        class=" uppercase text-gray-400">contact</h3>
+                        class=" uppercase text-gray-400 text-md">contact</h3>
                     <p
-                        class="text-[1.5rem] mt-3">
+                        class="text-xl mt-3">
                         Phnom Penh, Cambodia
                     </p>
                     <ULink
                         to="mailto:outh.menghour@gmail.com"
-                        class="text-[1.5rem] hover:underline transition">
+                        class="text-xl hover:underline transition">
                         Outh.menghour@gmail.com
                     </ULink>
                     <ULink
                         to="tel:067961719"
-                        class="text-[1.5rem] hover:underline transition">
+                        class="text-xl hover:underline transition">
                         +885 67961719
                     </ULink>
                 </div>
                 <div 
                     class="flex flex-col">
                     <h3
-                        class=" uppercase text-gray-400">service</h3>
+                        class=" uppercase text-gray-400 text-md">service</h3>
                     <p
-                        class="text-[1.5rem] mt-3">
+                        class="text-xl mt-3">
                         Web Development
                     </p>
                 </div>
@@ -61,22 +68,22 @@
                 <div 
                     class="flex flex-col justify-start items-end">
                     <h3
-                        class=" uppercase text-end text-gray-400">
+                        class=" uppercase text-end text-gray-400 text-md">
                         year of <br> experience
                     </h3>
                     <p
-                        class="text-[1.5rem] mt-3">
+                        class="text-xl mt-3">
                         Web Development
                     </p>
                 </div>
                 <div 
                     class="flex flex-col justify-start items-end">
                     <h3
-                        class=" uppercase text-end text-gray-400">
+                        class=" uppercase text-end text-gray-400 text-md">
                         Project <br> Done (Publish)
                     </h3>
                     <p
-                        class="text-[1.5rem] mt-3">
+                        class="text-xl mt-3">
                         2
                     </p>
                 </div>
@@ -87,7 +94,7 @@
             <h3
                 class=" uppercase text-gray-400">biography</h3>
             <p
-                class="text-[1.5rem] text-center">
+                class="text-xl text-center">
                 Work for money and design for love! <br> I’m 
                 <span class=" font-semibold">
                     Outh Menghour
@@ -99,8 +106,9 @@
                 based in Cambodia.
             </p>
         </div>
-        <MyProject/>
+        <Skills/>
         <Education/>
+        <MyProject/>
         <div 
             class="w-full flex items-center justify-center flex-col py-12">
             <h3
@@ -129,7 +137,8 @@ import {
 import { 
     MyProject,
     Experience,
-    Education
+    Education,
+    Skills
 } from '~/components/ui';
 definePageMeta({
     colorMode: 'light'

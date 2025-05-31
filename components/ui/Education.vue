@@ -1,9 +1,12 @@
 <template>
+    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mt-24">
+        Education & Certifications
+    </h3>
     <div
-        class="w-full py-12 grid grid-cols-2 gap-3">
+        class="w-full py-6 grid grid-cols-2">
         <div 
             class="space-y-6">
-            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-8">
                 Education
             </h2>
             <div 
@@ -12,7 +15,7 @@
                 class="border-l-4 pl-4"
                 :class="edu.color">
                 <h3 
-                    class="text-xl font-semibold text-gray-800 dark:text-white">
+                    class="text-1xl font-semibold text-gray-800 dark:text-white">
                     {{ edu.title }}
                 </h3>
                 <p 
@@ -27,7 +30,7 @@
         </div>
         <div 
             class="space-y-6 w-full">
-            <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-8">
                 Certifications
             </h3>
             <div 
@@ -38,7 +41,7 @@
                 <div 
                     class="w-fit">
                     <h3 
-                        class="text-xl font-semibold text-gray-800 dark:text-white">
+                        class="text-1xl font-semibold text-gray-800 dark:text-white">
                         {{ cer.title }}
                     </h3>
                     <p 
@@ -51,8 +54,7 @@
                     </span>
                 </div>
                 <ULink
-                    :key="idx"
-                    :to="cer.to"
+                    :href="cer.to"
                     target="__blank"
                     active-class="text-black rounded-full after:w-full"
                     class="group relative text-[.9rem] after:left-0 flex group rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
@@ -95,28 +97,28 @@ const certifications = [
         date: '02-12-2025',
         at: 'AWS Academy',
         color: 'border-blue-600',
-        to: '/files/pdf/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250424-26-ov5tf3.pdf'
+        to: '../../files/pdf/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250424-26-ov5tf3.pdf'
     },
     {
         title: 'Cloud Architecting',
         date: '04-24-2025',
         at: 'AWS Academy',
         color: 'border-blue-500',
-        to: '/files/pdf/AWS_Academy_Graduate___AWS_Academy_Cloud_Architecting_Badge20250424-28-t0jhg8.pdf'
+        to: '../../files/pdf/AWS_Academy_Graduate___AWS_Academy_Cloud_Architecting_Badge20250424-28-t0jhg8.pdf'
     },
     {
         title: 'Data Engineering',
         date: '01-10-2025',
         at: 'AWS Academy',
         color: 'border-blue-400',
-        to: '/files/pdf/AWS_Academy_Graduate___AWS_Academy_Data_Engineering_Badge20250403-27-npkehw.pdf'
+        to: '../../files/pdf/AWS_Academy_Graduate___AWS_Academy_Data_Engineering_Badge20250403-27-npkehw.pdf'
     },
     {
         title: 'Machine Learning',
         date: '02-26-2025',
         at: 'AWS Academy',
         color: 'border-blue-300',
-        to: '/files/pdf/AWS_Academy_Graduate___AWS_Academy_Machine_Learning_Foundations_Badge20250226-29-yv0zee.pdf'
+        to: '../../files/pdf/AWS_Academy_Graduate___AWS_Academy_Machine_Learning_Foundations_Badge20250226-29-yv0zee.pdf'
     }
 ]
 </script>
