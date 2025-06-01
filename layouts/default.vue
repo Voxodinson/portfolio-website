@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-full h-fit flex flex-col justify-center items-center">
+        class="w-full h-fit flex  flex-col justify-center items-center">
         <div 
             class="w-[90%] bg-white sticky top-0 z-30 transition duration-300"
             :class="{
@@ -8,16 +8,19 @@
             }">
             <Navigation/>
         </div>
-        <div class="w-[90%]">
+        <div 
+            class="w-[90%]">
             <NuxtPage/>
         </div>
+        <Footer/>
     </div>
 </template>
 
 <script setup lang="ts">
 
 import { 
-    Navigation 
+    Navigation,
+    Footer 
 } from '~/components/ui';
 
 
