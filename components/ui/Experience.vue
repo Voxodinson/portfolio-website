@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-full">
+        class="w-full pt-[100px]">
         <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Education</h2>
         <div 
             class="space-y-6">

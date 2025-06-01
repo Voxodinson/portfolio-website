@@ -1,8 +1,8 @@
 <template>
     <div
-        class=" w-full flex items-start justify-start flex-col">
+        class=" w-full flex items-start justify-start flex-col pt-[100px]">
         <h3 
-            class="text-3xl font-bold text-gray-800 dark:text-white mt-24">
+            class="text-3xl font-bold text-gray-800 dark:text-white">
             Skills
         </h3>
         <p

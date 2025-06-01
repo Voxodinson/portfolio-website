@@ -1,5 +1,5 @@
 <template>
-    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mt-24">
+    <h3 class="text-3xl font-bold text-gray-800 dark:text-white pt-[100px]">
         Education & Certifications
     </h3>
     <div
@@ -53,17 +53,15 @@
                         {{ cer.date }}
                     </span>
                 </div>
-                <ULink
+                <a
                     :href="cer.to"
-                    target="__blank"
-                    active-class="text-black rounded-full after:w-full"
-                    class="group relative text-[.9rem] after:left-0 flex group rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
-                    inactive-class="hover:after:w-full">
+                    target="_blank"
+                    class="group relative text-[.9rem] after:left-0 flex group rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full">
                     <span
                         class="group-hover:-translate-y-1 transition">
                         View PDF
                     </span>
-                </ULink>
+                </a>
             </div>
         </div>
     </div>

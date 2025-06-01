@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-full h-fit flex flex-col items-start mt-12 justify-start">
+        class="w-full h-fit flex flex-col items-start pt-[100px] justify-start">
         <h3
             class="text-3xl font-bold text-gray-800 dark:text-white mb-8">
             About Me

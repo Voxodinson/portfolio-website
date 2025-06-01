@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-
+import { ImageAtAngkorWat } from '~/assets/images';
 import { 
     Navigation,
     Footer 
