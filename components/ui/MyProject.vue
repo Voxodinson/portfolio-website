@@ -1,12 +1,12 @@
 <template>
     <div
-        class="w-full flex flex-col items-start justify-start py-12">
+        class="w-full flex flex-col items-start justify-start pb-12">
         <h3 
             class="text-3xl mt-6 font-bold text-gray-800 dark:text-white mb-8">
             Latest Works
         </h3>
         <div 
-            class="w-full grid grid-cols-3 gap-6">
+            class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <ProjectCard
                 :data="projects"/>
         </div>

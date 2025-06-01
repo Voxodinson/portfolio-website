@@ -1,26 +1,99 @@
 <template>
     <div
-        class="py-12 w-full flex items-start justify-start flex-col">
-        <h3 class="text-3xl font-bold text-gray-800 dark:text-white mt-24">
+        class=" w-full flex items-start justify-start flex-col">
+        <h3 
+            class="text-3xl font-bold text-gray-800 dark:text-white mt-24">
             Skills
         </h3>
-        <div 
-            class="w-full flex flex-wrap items-center justify-center mt-6 gap-y-6">
-            <div 
-                v-for="(skill, idx) in 20"
-                class="min-w-[120px] w-[10%] h-[100px] flex items-center justify-center">
+        <p
+            class="text-gray-400">
+            The skills, tools and technologies I am really good at:
+        </p>
+       <div
+            class="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-3 mt-6">  
+            <div
+                v-for="(skill, idx) in skills"
+                :key="idx"
+                class="flex items-center gap-3 p-3 shadow-sm rounded-md border-[1px] border-gray-200">
                 <UIcon
-                    name="vscode-icons:file-type-tailwind"
-                    class="w-20 h-20"/>
+                    :name="skill.icon"
+                    class="w-10 h-10"/>
                 <h6
-                    class="text-1xl">
-                    Nuxt JS
+                    class="text-sm">
+                    {{ skill.name }}
                 </h6>
             </div>
         </div>
+        
     </div>
 </template>
 
 <script setup lang="ts">
 
+const skills = [
+    {
+        icon: 'devicon:html5',
+        name: 'HTML'
+    },
+    {
+        icon: 'devicon:css3',
+        name: 'CSS'
+    },
+    {
+        icon: 'devicon:javascript',
+        name: 'JavaScript'
+    },
+    {
+        icon: 'devicon:typescript',
+        name: 'Typescript'
+    },
+    {
+        icon: 'devicon:tailwindcss',
+        name: 'Tailwind CSS'
+    },
+    {
+        icon: 'devicon:bootstrap',
+        name: 'Bootstrap CSS'
+    },
+    {
+        icon: 'material-icon-theme:vue',
+        name: 'Vue JS'
+    },
+    {
+        icon: 'vscode-icons:file-type-nuxt',
+        name: 'Nuxt JS'
+    },
+    {
+        icon: 'vscode-icons:file-type-angular',
+        name: 'Angular JS'
+    },
+    {
+        icon: 'vscode-icons:file-type-reactjs',
+        name: 'React JS'
+    },
+    {
+        icon: 'logos:php',
+        name: 'PHP'
+    },
+    {
+        icon: 'material-icon-theme:laravel',
+        name: 'Laravel'
+    },
+    {
+        icon: 'devicon:mysql-wordmark',
+        name: 'MySql'
+    },
+    {
+        icon: 'devicon:postgresql',
+        name: 'Postgresql'
+    },
+    {
+        icon: 'devicon:git',
+        name: '.git'
+    },
+    {
+        icon: 'devicon:nodejs-wordmark',
+        name: 'Node JS'
+    }
+]
 </script>   

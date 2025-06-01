@@ -3,7 +3,7 @@
         Education & Certifications
     </h3>
     <div
-        class="w-full py-6 grid grid-cols-2">
+        class="w-full py-6 grid grid-cols-1 md:grid-cols-2">
         <div 
             class="space-y-6">
             <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-8">
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div 
-            class="space-y-6 w-full">
+            class="space-y-6 mt-6 md:mt-0 w-full">
             <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-8">
                 Certifications
             </h3>
@@ -73,7 +73,7 @@
 const educations = [
     {
         title: 'Bachelor of Computer Science (G-25)',
-        school: 'Angkor High School',
+        school: 'Royal University of Phnom Penh',
         year: '2022-2025',
         color: 'border-blue-600'
     },

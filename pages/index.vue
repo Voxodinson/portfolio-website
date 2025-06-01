@@ -106,16 +106,17 @@
                 based in Cambodia.
             </p>
         </div>
-        <Skills/>
+        <About/>
         <Education/>
-        <MyProject/>
+        <Skills/>
         <div 
-            class="w-full flex items-center justify-center flex-col py-12">
+            class="w-full flex items-center justify-center flex-col h-[40vh]">
             <h3
-                class="text-[1.5rem]">
+                class="text-[1.5rem] text-center">
                 Got a Vision? Let's Bring It to Life!
             </h3>
-            <p>
+            <p
+                class="text-gray-600 text-center">
                 I'm always excited to collaborate on new and innovative projects. Whether you're starting from scratch or refining an existing idea
             </p>
             <ULink
@@ -127,6 +128,7 @@
                     class="w-6 h-6"/>
             </ULink>
         </div>
+        <MyProject/>
     </div>
 </template>
 
@@ -138,7 +140,8 @@ import {
     MyProject,
     Experience,
     Education,
-    Skills
+    Skills,
+    About
 } from '~/components/ui';
 definePageMeta({
     colorMode: 'light'
