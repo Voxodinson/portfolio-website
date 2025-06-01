@@ -44,6 +44,15 @@
                             class="w-6 h-6 group-hover:-translate-y-1 transition"/>
                     </ULink>
                 </li>
+                <li
+                    class="ml-6">
+                    <a
+                        href="../../files/pdf/CV.pdf"
+                        target="_blank"
+                        class="py-2 px-4 text-white rounded-md bg-black">
+                        Download CV
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -60,17 +69,13 @@ const link_items = [
         to: '/'
     },
     {
-        label: 'about me',
-        to: '/about'
-    },
-    {
         label: 'portfolio',
         to: '/portfolio'
     },
     {
         label: 'contact',
         to: '/contact'
-    },
+    }
 ];
 
 const social_media = [

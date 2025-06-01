@@ -108,9 +108,11 @@
         </div>
         <About/>
         <Education/>
+        <WorkProcess/>
+        <MyProject/>
         <Skills/>
         <div 
-            class="w-full flex items-center justify-center flex-col h-[40vh]">
+            class="w-full flex items-center justify-center flex-col py-[200px]">
             <h3
                 class="text-[1.5rem] text-center">
                 Got a Vision? Let's Bring It to Life!
@@ -128,20 +130,21 @@
                     class="w-6 h-6"/>
             </ULink>
         </div>
-        <MyProject/>
     </div>
 </template>
 
 <script setup lang="ts">
 import { 
-    AtAngkorWat
+    AtAngkorWat,
+    ImageAtAngkorWat
 } from '~/assets/images';
 import { 
     MyProject,
     Experience,
     Education,
     Skills,
-    About
+    About,
+    WorkProcess
 } from '~/components/ui';
 definePageMeta({
     colorMode: 'light'
