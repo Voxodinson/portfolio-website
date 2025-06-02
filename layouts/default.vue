@@ -2,14 +2,14 @@
     <div
         class="w-full h-fit flex  flex-col justify-center items-center">
         <div 
-            class="w-[90%] bg-white sticky top-0 z-30 transition duration-300"
+            class="w-full items-center justify-center flex bg-white sticky top-0 z-30 transition duration-300"
             :class="{
                 '-translate-y-full': !isVisible
             }">
             <Navigation/>
         </div>
         <div 
-            class="w-[90%]">
+            class="w-[90%] flex items-center justify-center">
             <NuxtPage/>
         </div>
         <Footer/>

@@ -1,96 +1,36 @@
 <template>
     <div
         class="w-full">
-        <div 
-            class="w-full flex h-[50vh] flex-col items-center justify-center">
-            <h1
-                class="text-center text-[3rem] uppercase font-semibold">
-                Outh Menghour <br>
-                End-to-End Web Development <br>
-                Based in Cambodia
-            </h1>
-            <span
-                class="flex items-center gap-3 mt-6 text-[1.2rem] py-1 px-4 rounded-full bg-gray-100">
-                <UIcon
-                    name="svg-spinners:blocks-scale"
-                    class="w-4 h-4"/>
-                Portfolio
-            </span>
+        <div
+            class="w-full flex min-h-[90vh] flex-col items-start justify-center relative overflow-hidden">
+            <div class="absolute inset-0 z-10 bg-black/50"></div>
+            <div
+                class="absolute flex items-start justify-end flex-col inset-0 z-10 p-3 md:p-6">
+                <span
+                    class="flex items-center gap-3 text-sm md:text-base lg:text-lg py-2 px-4 rounded-full bg-gray-100 text-black">
+                    <UIcon
+                        name="svg-spinners:blocks-scale"
+                        class="w-4 h-4 text-black"/>
+                    Portfolio
+                </span>
+                <h1
+                    class="text-start mt-4 md:mt-6 lg:mt-8 text-xl md:text-3xl lg:text-5xl uppercase font-semibold text-white">
+                    Outh Menghour <br>
+                    End-to-End Web Development <br>
+                    Based in Cambodia
+                </h1>
+            </div>
+            <picture>
+                <source media="(max-width: 430px)" :srcset="AtAngkorWat">
+                <img
+                    :src="ImageAtAngkorWat"
+                    alt="image"
+                    class="w-full min-h-[100vh] object-cover absolute inset-0">
+            </picture>
         </div>
+
         <div 
-            class="w-full grid grid-cols-3 items-center pb-12">
-            <div 
-                class="w-fullf flex flex-col gap-16">
-                <div 
-                    class="flex flex-col">
-                    <h3
-                        class=" uppercase text-gray-400 text-md">contact</h3>
-                    <p
-                        class="text-xl mt-3">
-                        Phnom Penh, Cambodia
-                    </p>
-                    <ULink
-                        to="mailto:outh.menghour@gmail.com"
-                        class="text-xl hover:underline transition">
-                        Outh.menghour@gmail.com
-                    </ULink>
-                    <ULink
-                        to="tel:067961719"
-                        class="text-xl hover:underline transition">
-                        +885 67961719
-                    </ULink>
-                </div>
-                <div 
-                    class="flex flex-col">
-                    <h3
-                        class=" uppercase text-gray-400 text-md">service</h3>
-                    <p
-                        class="text-xl mt-3">
-                        Web Development
-                    </p>
-                </div>
-            </div>
-            <div 
-                class="w-full flex items-start justify-center">
-                <div 
-                    class="w-fit h-fit p-3 shadow-sm border-[1px] border-gray-200 rounded-full">
-                    <div 
-                        class="h-[600px] w-[400px] overflow-hidden rounded-full border-[1px] border-gray-200">
-                        <img 
-                            :src="AtAngkorWat" 
-                            alt="image"
-                            class="w-full h-full">
-                    </div>
-                </div>
-            </div>
-            <div 
-                class="w-full flex flex-col gap-16">
-                <div 
-                    class="flex flex-col justify-start items-end">
-                    <h3
-                        class=" uppercase text-end text-gray-400 text-md">
-                        year of <br> experience
-                    </h3>
-                    <p
-                        class="text-xl mt-3">
-                        Web Development
-                    </p>
-                </div>
-                <div 
-                    class="flex flex-col justify-start items-end">
-                    <h3
-                        class=" uppercase text-end text-gray-400 text-md">
-                        Project <br> Done (Publish)
-                    </h3>
-                    <p
-                        class="text-xl mt-3">
-                        2
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div 
-            class="w-full flex items-center justify-center flex-col gap-3">
+            class="w-full flex items-center justify-center flex-col gap-3 mt-12">
             <h3
                 class=" uppercase text-gray-400">biography</h3>
             <p
@@ -108,6 +48,7 @@
         </div>
         <About/>
         <Education/>
+        <Experience/>
         <WorkProcess/>
         <MyProject/>
         <Skills/>

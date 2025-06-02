@@ -16,7 +16,7 @@
             <div
                 v-for="(p, idx) in process"
                 :key="idx"
-                class="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col items-start gap-4">  
+                class="border-b-[1px] border-gray-200 rounded-lg shadow-md p-6 flex flex-col items-start gap-4">  
                 <div
                     class="w-16 h-16 bg-purple-100 rounded-md flex items-center justify-center">  
                     <UIcon
