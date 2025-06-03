@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-[90%] flex items-center justify-between h-[100px]">
+        class="w-[90%] bg-white dark:bg-black flex items-center justify-between h-[100px]">
         <h1
             class=" text-[1.5rem] uppercase font-thin font-anton tracking-wider">
             Outh Menghour
@@ -26,11 +26,20 @@
                 </li>
             </ul>
         </div>
+        <!-- responsive -->
          <UDropdown
             class="lg:hidden flex"
             :items="itemsLinkDropdown"
-            :popper="{ arrow: true }">
-            <template #account="{ item }">
+            :popper="{ 
+                arrow: true 
+            }"
+            :ui="{
+                width: 'w-[250px]'
+            }">
+            <template 
+                #account="{ 
+                    item 
+                }">
                 <ULink
                     :to="item.to"
                     active-class="text-black"
@@ -44,6 +53,7 @@
                 icon="iconamoon:menu-burger-horizontal-fill"
                 class="border-none"/>    
         </UDropdown>
+        <!-- none responsive -->
         <div 
             class="hidden lg:flex">
             <ul 
@@ -65,8 +75,11 @@
                 <li class="border-l-[1px] border-gray-300 h-[20px]"></li>
                 <li>
                     <UIcon  
-                        name="line-md:moon-to-sunny-outline-loop-transition"
-                        class="w-6 h-6 mt-1 cursor-pointer hover:scale-110 transition"/>
+                        :name="modes.icon"
+                        class="w-6 h-6 mt-1 cursor-pointer hover:scale-110 transition"
+                        @click="() => {
+                            toggleMode();
+                        }"/>
                 </li>
                 <li
                     class="">
@@ -87,6 +100,12 @@
 /**
  * Beign Declare variable
  */
+const isDarkMode: Ref<boolean> = ref<boolean>(false);
+const modes = ref({
+  mode: 'Dark Mode',
+  icon: 'material-symbols:dark-mode-outline-rounded'
+})
+
 const link_items = [
     {
         label: 'home',
@@ -102,34 +121,71 @@ const link_items = [
     }
 ];
 
-const itemsLinkDropdown = [
+const itemsLinkDropdown = computed(() => [
+    [
+        {
+            label: 'Navigation',
+            icon: '',
+            to: ''
+        }
+    ], 
     [
         {
             label: 'Home',
-            to: '/',
-            icon: 'material-symbols:home'
-        }
-    ], 
-    [
-        {
-            label: 'Shop',
-            icon: 'material-symbols:shopping-bag-outline',
-            to: '/products/product',
+            icon: 'material-symbols:home',
+            to: '/'
         },
         {
-            label: 'Travel',
-            icon: 'ic:round-travel-explore',
-            to: '/travels/travel',
+            label: 'Portfolio',
+            icon: 'bytesize:portfolio',
+            to: '/portfolio',
+        },
+        {
+            label: 'Contact',
+            icon: 'material-symbols:call',
+            to: '/contact',
         }
     ], 
     [
         {
-            label: 'About',
-            icon: 'ix:about',
-            to: '/about',
+            label: 'Social Media',
+            icon: '',
+            to: '',
+        }
+    ],
+    [
+         {
+            label: 'Fackbook',
+            icon: 'uil:facebook-f',
+            to: ''
+        },
+        {
+            label: 'Instagram',
+            icon: 'mingcute:instagram-line',
+            to: ''
+        },
+        {
+            label: 'Telegram',
+            icon: 'mdi:telegram',
+            to: ''
+        },
+        {
+            label: 'Github',
+            icon: 'mdi:github',
+            to: '',
+        },
+    ],
+    [
+        {
+            label: modes.value.mode,
+            icon:  modes.value.icon,
+            to: '',
+            click: () => {
+                toggleMode();
+            }
         }
     ]
-];
+]);
 
 const social_media = [
     {
@@ -141,15 +197,38 @@ const social_media = [
         to: ''
     },
     {
-        icon: 'hugeicons:new-twitter',
+        icon: 'mdi:telegram',
         to: ''
     },
     {
-        icon: 'mdi:telegram',
+        icon: 'mdi:github',
         to: ''
     },
 ]
 /**
  * End Declare variable
  */
+
+/**
+ * Some logical section
+ */
+const toggleMode = () => {
+  isDarkMode.value = !isDarkMode.value;
+
+  if (isDarkMode.value) {
+    document.documentElement.classList.add('dark');
+    modes.value.mode = 'Light Mode';
+    modes.value.icon = 'line-md:moon-alt-to-sunny-outline-loop-transition';
+  } else {
+    document.documentElement.classList.remove('dark');
+    modes.value.mode = 'Dark Mode';
+    modes.value.icon = 'line-md:sunny-outline-to-moon-loop-transition';
+  }
+};
+
+
+/**
+ * Some logical section
+ */
+
 </script>
