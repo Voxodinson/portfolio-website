@@ -6,7 +6,7 @@
             Get in touch
         </span>
         <p
-            class="text-center">
+            class="text-center text-[.8rem] md:text-[1rem]">
             What’s next? Feel free to reach out to me if you're looking for <br> 
             a developer, have a query, or simply want to connect.
         </p>
@@ -18,7 +18,7 @@
             <ULink
                 to="mailto:outh.menghour@gmail.com"
                 class="text-xl hover:underline transition">
-                Outh.menghour@gmail.com
+                outh.menghour@gmail.com
             </ULink>
         </div>  
         <div 
