@@ -10,7 +10,7 @@
             <div 
                 v-for="(exp, idx) in experiences" 
                 :key="idx"
-                class="w-full flex p-6 flex-col border-b-[1px] border-gray-200 shadow-md rounded-md">
+                class="w-full flex p-6 flex-col border-b-[1px] border-gray-200 dark:bg-slate-700 dark:border-none shadow-md rounded-md">
                 <div 
                     class="flex flex-col lg:flex-row justify-between">
                     <h3 
@@ -23,11 +23,11 @@
                     </span>
                 </div>
                 <p 
-                    class="text-gray-600 dark:text-gray-300 border-b-[1px] border-gray-200 pb-3">
+                    class="text-gray-700 dark:text-white border-b-[1px] border-gray-200 pb-3">
                     {{ exp.position }} - {{ exp.at }}
                 </p>
                 <p
-                    class="text-gray-600 text-md mt-3">
+                    class="text-gray-700 dark:text-white text-md mt-3">
                     {{ exp.description }}
                 </p>
             </div>

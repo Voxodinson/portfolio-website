@@ -1,8 +1,8 @@
 <template>
     <div
-        class="w-full h-[60vh] bg-gray-100 flex flex-col items-center gap-3 justify-center">
+        class="w-full h-[60vh] bg-gray-100 dark:bg-slate-700 flex flex-col items-center gap-3 justify-center">
         <span
-            class="px-4 py-1 rounded-full bg-gray-200">
+            class="px-4 py-1 rounded-full bg-gray-200 dark:bg-slate-500">
             Get in touch
         </span>
         <p
@@ -47,7 +47,7 @@
                         :key="idx"
                         :to="item.to"
                         active-class="text-black rounded-full after:w-full"
-                        class="group relative uppercase text-[.9rem] group after:left-0 pb-1 flex rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
+                        class="group relative uppercase text-[.9rem] dark:after:bg-white group after:left-0 pb-1 flex rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
                         inactive-class="hover:after:w-full">
                         <UIcon
                             :name="item.icon"
@@ -60,20 +60,20 @@
     <div 
         class="h-[6vh] flex items-center justify-center">
         <p
-            class="text-[.8rem] text-gray-400">
+            class="text-[.8rem] text-gray-700 dark:text-white">
             &copy; 2025 | 
             <span
-                class=" text-black">
+                class=" text-black dark:text-white dark:font-bold">
                 Designed
             </span> 
             and 
             <span
-                class=" text-black">
+                class=" text-black dark:text-white dark:font-bold">
                 coded
             </span> 
             with ❤️️ 
             <span
-                class=" text-black">
+                class=" text-black dark:text-white dark:font-bold">
                 Outh Menghour
             </span>
         </p>
@@ -92,11 +92,11 @@ const social_media = [
         to: ''
     },
     {
-        icon: 'hugeicons:new-twitter',
+        icon: 'mdi:telegram',
         to: ''
     },
     {
-        icon: 'mdi:telegram',
+        icon: 'mdi:github',
         to: ''
     },
 ]
