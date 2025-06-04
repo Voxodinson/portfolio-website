@@ -6,7 +6,7 @@
             Skills and Technologies
         </h3>
         <p
-            class="text-gray-400">
+            class="text-gray-700 dark:text-white">
             The skills, tools and technologies I am really good at:
         </p>
        <div
@@ -14,7 +14,7 @@
             <div
                 v-for="(skill, idx) in skills"
                 :key="idx"
-                class="flex items-center gap-3 p-3 shadow-sm rounded-md border-[1px] border-gray-200">
+                class="flex items-center bg-white dark:bg-slate-700 gap-3 p-3 shadow-sm rounded-md border-[1px] border-gray-200">
                 <UIcon
                     :name="skill.icon"
                     class="w-10 h-10"/>

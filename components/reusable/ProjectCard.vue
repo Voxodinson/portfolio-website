@@ -21,11 +21,11 @@
             </ULink>
         </div>
         <h3
-            class="my-2 font-semibold text-gray-800 text-wrap">
+            class="my-2 font-semibold text-gray-800 dark:text-white text-wrap">
             {{ p.title }}
         </h3>
         <p
-            class="text-gray-400 text-[.8rem] line-clamp-2 overflow-hidden text-ellipsis w-full">
+            class="text-gray-700 dark:text-whites text-[.8rem] line-clamp-2 overflow-hidden text-ellipsis w-full">
             {{ p.detail }}
         </p>
     </div>

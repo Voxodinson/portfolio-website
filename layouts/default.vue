@@ -1,8 +1,8 @@
 <template>
     <div
-        class="w-full h-fit flex  flex-col justify-center items-center">
+        class="w-full h-fit flex bg-white dark:bg-gray-800  flex-col justify-center items-center">
         <div 
-            class="w-full items-center justify-center flex bg-white sticky top-0 z-30 transition duration-300"
+            class="w-[90%] items-center justify-center bg-white dark:bg-[#222831] flex sticky top-0 z-30 transition duration-300"
             :class="{
                 '-translate-y-full': !isVisible
             }">

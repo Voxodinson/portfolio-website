@@ -59,7 +59,7 @@
                 Got a Vision? Let's Bring It to Life!
             </h3>
             <p
-                class="text-gray-600 text-center">
+                class="text-gray-700 dark:text-white text-center">
                 I'm always excited to collaborate on new and innovative projects. Whether you're starting from scratch or refining an existing idea
             </p>
             <ULink

@@ -7,7 +7,7 @@
                 My Work Process
             </h3>
             <p
-                class="text-gray-600 mt-3">
+                class="text-gray-700 dark:text-white mt-3">
                 My approach to web development is a structured and collaborative journey, designed to transform your ideas into impactful digital realities. I believe in clear communication and a systematic workflow that ensures transparency and delivers high-quality results.
             </p>
         </div>
@@ -16,7 +16,7 @@
             <div
                 v-for="(p, idx) in process"
                 :key="idx"
-                class="border-b-[1px] border-gray-200 rounded-lg shadow-md p-6 flex flex-col items-start gap-4">  
+                class="border-b-[1px] border-gray-200 dark:border-none dark:bg-slate-700 rounded-lg shadow-md p-6 gap-3 flex flex-col items-start">  
                 <div
                     class="w-16 h-16 bg-purple-100 rounded-md flex items-center justify-center">  
                     <UIcon
@@ -24,10 +24,11 @@
                         class="w-8 h-8 text-purple-500"/>  
                 </div>
                 <h3
-                    class="font-semibold text-lg capitalize">  {{ p.title }}
+                    class="font-semibold text-lg capitalize">  
+                    {{ p.title }}
                 </h3>
                 <p
-                    class="text-sm text-gray-700">  {{ p.detail }}
+                    class="text-sm text-gray-700 dark:text-white ">  {{ p.detail }}
                 </p>
             </div>
         </div>

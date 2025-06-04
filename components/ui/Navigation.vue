@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-[90%] bg-white dark:bg-black flex items-center justify-between h-[100px]">
+        class="w-full bg-white dark:bg-[#222831] flex items-center justify-between h-[100px]">
         <h1
             class=" text-[1.5rem] uppercase font-thin font-anton tracking-wider">
             Outh Menghour
@@ -16,7 +16,7 @@
                         :key="idx"
                         :to="item.to"
                         active-class="text-black rounded-full after:w-full"
-                        class="group relative uppercase text-[.9rem] after:left-0 flex group rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
+                        class="group relative uppercase text-[.9rem] dark:text-white dark:after:bg-white after:left-0 flex group rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
                         inactive-class="hover:after:w-full">
                         <span
                             class="group-hover:-translate-y-1 font-semibold transition">
@@ -65,7 +65,7 @@
                         :key="idx"
                         :to="item.to"
                         active-class="text-black rounded-full after:w-full"
-                        class="group relative uppercase text-[.9rem] group after:left-0 flex rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
+                        class="group relative uppercase text-[.9rem] group dark:after:bg-white after:left-0 flex rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
                         inactive-class="hover:after:w-full">
                         <UIcon
                             :name="item.icon"
