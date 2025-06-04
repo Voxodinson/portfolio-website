@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-full bg-white dark:bg-[#222831] flex items-center justify-between h-[100px]">
+        class="w-full bg-white dark:bg-slate-800 flex items-center justify-between h-[100px]">
         <h1
             class=" text-[1.5rem] uppercase font-thin font-anton tracking-wider">
             Outh Menghour
@@ -212,20 +212,45 @@ const social_media = [
 /**
  * Some logical section
  */
-const toggleMode = () => {
-  isDarkMode.value = !isDarkMode.value;
+const toggleMode = (): void => {
+    isDarkMode.value = !isDarkMode.value;
 
-  if (isDarkMode.value) {
-    document.documentElement.classList.add('dark');
-    modes.value.mode = 'Light Mode';
-    modes.value.icon = 'line-md:moon-alt-to-sunny-outline-loop-transition';
-  } else {
-    document.documentElement.classList.remove('dark');
-    modes.value.mode = 'Dark Mode';
-    modes.value.icon = 'line-md:sunny-outline-to-moon-loop-transition';
-  }
+    if (isDarkMode.value) {
+        document.documentElement.classList.add('dark');
+
+        modes.value.mode = 'Light Mode';
+        modes.value.icon = 'line-md:moon-alt-to-sunny-outline-loop-transition';
+
+        localStorage.setItem('darkMode', 'true');
+    } else {
+        document.documentElement.classList.remove('dark');
+
+        modes.value.mode = 'Dark Mode';
+        modes.value.icon = 'line-md:sunny-outline-to-moon-loop-transition';
+
+        localStorage.setItem('darkMode', 'false');
+    }
 };
 
+onMounted((): void => {
+    const savedMode: string | null = localStorage.getItem('darkMode');
+
+    if (savedMode === 'true') {
+        isDarkMode.value = true;
+
+        document.documentElement.classList.add('dark');
+
+        modes.value.mode = 'Light Mode';
+        modes.value.icon = 'line-md:moon-alt-to-sunny-outline-loop-transition';
+    } else {
+        isDarkMode.value = false;
+        
+        document.documentElement.classList.remove('dark');
+
+        modes.value.mode = 'Dark Mode';
+        modes.value.icon = 'line-md:sunny-outline-to-moon-loop-transition';
+    }
+});
 
 /**
  * Some logical section
