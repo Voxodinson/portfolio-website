@@ -14,11 +14,13 @@
                     Portfolio
                 </span>
                 <h1
-                    class="text-start mt-4 md:mt-6 lg:mt-8 text-xl md:text-3xl lg:text-5xl uppercase font-semibold text-white">
-                    Outh Menghour <br>
-                    End-to-End Web Development <br>
-                    Based in Cambodia
+                    class="text-start mt-4 md:mt-6 lg:mt-8 text-2xl md:text-3xl lg:text-5xl uppercase font-semibold text-white">
+                    Outh Menghour
                 </h1>
+                <p
+                    class="text-md uppercase font-bold">
+                    Web Developer
+                </p>
             </div>
             <picture>
                 <source media="(max-width: 430px)" :srcset="AtAngkorWat">
