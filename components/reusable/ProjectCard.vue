@@ -10,7 +10,7 @@
                 alt="img"
                 class="w-full h-full object-cover">
             <ULink 
-                to="#"
+                :to="`/portfolios/${p.id}`"
                 class="hidden group-hover:flex cursor-pointer bg-white bg-opacity-45 items-center justify-center transition w-full h-full absolute top-0 left-0">
                 <div
                     class="w-[70px] h-[70px] flex justify-center items-center rounded-full bg-gray-700">
@@ -25,13 +25,15 @@
             {{ p.title }}
         </h3>
         <p
-            class="text-gray-700 dark:text-whites text-[.8rem] line-clamp-2 overflow-hidden text-ellipsis w-full">
+            class="text-gray-700 dark:text-white text-[.9rem] line-clamp-2 overflow-hidden text-ellipsis w-full">
             {{ p.detail }}
         </p>
     </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import { ULink } from '#components';
 /**
 * Begin::Set event trigger to parent component
 */

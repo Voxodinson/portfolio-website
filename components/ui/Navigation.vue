@@ -86,7 +86,7 @@
                     <a
                         href="../../files/pdf/CV.pdf"
                         target="_blank"
-                        class="py-2 px-4 text-white rounded-md bg-black">
+                        class="py-2 px-4 text-white rounded-md dark:bg-white dark:text-black bg-black">
                         Download CV
                     </a>
                 </li>
