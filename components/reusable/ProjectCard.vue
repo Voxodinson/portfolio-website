@@ -38,7 +38,7 @@ import { ULink } from '#components';
 * Begin::Set event trigger to parent component
 */
 const route = useRoute();
-withDefaults(defineProps<{
+const props = withDefaults(defineProps<{
     data: any,
 }>(),{
     data: () => []
@@ -46,8 +46,6 @@ withDefaults(defineProps<{
 /**
 * End::Set event trigger to parent component
 */
+
+console.log(props.data)
 </script>
-
-<style scoped>
-
-</style>
