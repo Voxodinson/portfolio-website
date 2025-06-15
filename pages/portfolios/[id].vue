@@ -2,7 +2,7 @@
     <div
         class="w-full  pb-[50px] md:mt-[40px] gap-6">
         <div
-            class="w-full h-fit flex flex-col items-center justify-center">
+            class="w-full h-fitn flex flex-col items-center justify-center">
             <div
                 class="bg-black w-full h-full relative rounded-md overflow-hidden">
                 <div

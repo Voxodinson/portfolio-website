@@ -167,12 +167,12 @@ const itemsLinkDropdown = computed(() => [
         {
             label: 'Telegram',
             icon: 'mdi:telegram',
-            to: ''
+            to: 'https://t.me/OuthMenghour'
         },
         {
             label: 'Github',
             icon: 'mdi:github',
-            to: '',
+            to: 'https://github.com/Voxodinson',
         },
     ],
     [
@@ -198,11 +198,11 @@ const social_media = [
     },
     {
         icon: 'mdi:telegram',
-        to: ''
+        to: 'https://t.me/OuthMenghour'
     },
     {
         icon: 'mdi:github',
-        to: ''
+        to: 'https://github.com/Voxodinson'
     },
 ]
 /**
