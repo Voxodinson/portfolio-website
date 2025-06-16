@@ -64,6 +64,7 @@
                     <ULink
                         :key="idx"
                         :to="item.to"
+                        target="__blank"
                         active-class="text-black rounded-full after:w-full"
                         class="group relative uppercase text-[.9rem] group dark:after:bg-white after:left-0 flex rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
                         inactive-class="hover:after:w-full">
@@ -157,12 +158,12 @@ const itemsLinkDropdown = computed(() => [
          {
             label: 'Fackbook',
             icon: 'uil:facebook-f',
-            to: ''
+            to: 'https://web.facebook.com/hour.479235'
         },
         {
             label: 'Instagram',
             icon: 'mingcute:instagram-line',
-            to: ''
+            to: 'https://www.instagram.com/ig.hour/'
         },
         {
             label: 'Telegram',
@@ -190,11 +191,11 @@ const itemsLinkDropdown = computed(() => [
 const social_media = [
     {
         icon: 'uil:facebook-f',
-        to: ''
+        to: 'https://web.facebook.com/hour.479235'
     },
     {
         icon: 'mingcute:instagram-line',
-        to: ''
+        to: 'https://www.instagram.com/ig.hour/'
     },
     {
         icon: 'mdi:telegram',
