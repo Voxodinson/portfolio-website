@@ -81,23 +81,22 @@
 </template>
 
 <script setup lang="ts">
-
 const social_media = [
     {
         icon: 'uil:facebook-f',
-        to: ''
+        to: 'https://web.facebook.com/hour.479235'
     },
     {
         icon: 'mingcute:instagram-line',
-        to: ''
+        to: 'https://www.instagram.com/ig.hour/'
     },
     {
         icon: 'mdi:telegram',
-        to: ''
+        to: 'https://t.me/OuthMenghour'
     },
     {
         icon: 'mdi:github',
-        to: ''
+        to: 'https://github.com/Voxodinson'
     },
 ]
 </script>

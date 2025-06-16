@@ -18,12 +18,14 @@
                     Outh Menghour
                 </h1>
                 <p
-                    class="text-md uppercase font-bold">
+                    class="text-md text-white uppercase font-bold">
                     Web Developer
                 </p>
             </div>
             <picture>
-                <source media="(max-width: 430px)" :srcset="AtAngkorWat">
+                <source 
+                    media="(max-width: 430px)" 
+                    :srcset="AtAngkorWat">
                 <img
                     :src="ImageAtAngkorWat"
                     alt="image"
