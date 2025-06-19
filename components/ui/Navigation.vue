@@ -85,7 +85,7 @@
                 <li
                     class="">
                     <a
-                        href="../../files/pdf/CV.pdf"
+                        href="../../files/pdf/cv.pdf"
                         target="_blank"
                         class="py-2 px-4 text-white rounded-md dark:bg-white dark:text-black bg-black">
                         Download CV
@@ -256,5 +256,4 @@ onMounted((): void => {
 /**
  * Some logical section
  */
-
 </script>
