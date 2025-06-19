@@ -2,6 +2,7 @@
     <div
         class="w-full  pb-[50px] md:mt-[40px] gap-6">
         <div
+            v-if="!project || !project.policy"
             class="w-full h-fitn flex flex-col items-center justify-center">
             <div
                 class="bg-black w-full h-full relative rounded-md overflow-hidden">
@@ -37,7 +38,18 @@
                 </template>
             </div>
         </div>
-
+        <div 
+            v-else
+            class="w-full h-[70vh] flex items-center flex-col rounded-md gap-3 justify-center bg-gray-100">
+            <h3
+                class="text-2xl text-black">
+                Per company policy, project images cannot be shown publicly.
+            </h3>
+            <p
+                class="text-center text-gray-700">
+                Project images often contain sensitive or proprietary information that the company wants to keep private from competitors or the wider market. This could include design details, unreleased product features, internal processes, or client-specific information.
+            </p>
+        </div>
         <div 
             v-if="project && !pending" 
             class="py-6 flex flex-col justify-start">
@@ -118,7 +130,8 @@ const projects = [
         title: 'JS Express Delivery Admin',
         detail: 'This strongly suggests that the application is a web-based administrative interface for managing an express delivery service.',
         img: 'https://cdn.dribbble.com/userupload/16072864/file/original-75fa6cf2feb9be53365f225615c3aecd.png?resize=400x0',
-        link: 'http://example.com/project1'
+        link: 'http://example.com/project1',
+        policy: 'true'
     },
     {
         id: '2',
@@ -135,14 +148,16 @@ const projects = [
             Exam7,
             Exam8,
         ],
-        link: 'http://example.com/project2'
+        link: 'http://example.com/project2',
+        policy: false
     },
     {
         id: '3',
         title: 'PinPoint: Intelligent Local Place Recommendation Engine',
         detail: 'The experience was very pleasant. Communication was clear, and the process was efficient. I would recommend it to others. Good quality and friendly service. A few minor issues but nothing that impacted the overall positive experience.',
         img: 'https://cdn.dribbble.com/userupload/15231300/file/original-d1207f24364f1573c96e9e81a732e342.png?format=webp&resize=400x300&vertical=center',
-        link: 'http://example.com/project3'
+        link: 'http://example.com/project3',
+        policy: false
     }
 ];
 
@@ -182,6 +197,7 @@ onMounted(() => {
     setTimeout(() => {
         project.value = projects.find(p => p.id === projectId);
         pending.value = false;
+        console.log(project.value)
     }, 500);
 });
 </script>
