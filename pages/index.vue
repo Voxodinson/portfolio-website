@@ -53,8 +53,29 @@
         <About/>
         <Education/>
         <Experience/>
-        <WorkProcess/>
-        <MyProject/>
+        <div
+            class="w-full flex flex-col items-start justify-start pt-[100px]">
+            <h3 
+                class="text-3xl mt-6 font-bold text-gray-800 dark:text-white mb-8">
+                Latest Works
+            </h3>
+            <div 
+                class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <ProjectCard
+                    :data="projects"/>
+            </div>
+            <div 
+                class="w-full flex items-center justify-center">
+                <ULink
+                    to=""
+                    class="flex items-center gap-3 text-[1.2rem] underline mt-12">
+                    See more
+                    <UIcon
+                        name="iconamoon:arrow-right-1"
+                        class="w-6 h-6"/>
+                </ULink>
+            </div>
+        </div>
         <Skills/>
         <div 
             class="w-full flex items-center justify-center flex-col py-[200px]">
@@ -84,15 +105,37 @@ import {
     ImageAtAngkorWat
 } from '~/assets/images';
 import { 
-    MyProject,
+    ProjectCard 
+} from '~/components/reusable';
+import {
     Experience,
     Education,
     Skills,
-    About,
-    WorkProcess
+    About
 } from '~/components/ui';
 definePageMeta({
     colorMode: 'light'
 });
 
+const projects = [
+    {
+        id: 1,
+        title: 'JS Express Delivery Admin',
+        detail: 'This strongly suggests that the application is a web-based administrative interface for managing an express delivery service.',
+        img: 'https://cdn.dribbble.com/userupload/16072864/file/original-75fa6cf2feb9be53365f225615c3aecd.png?resize=400x0',
+    },
+    {
+        id: 2,
+        title: 'Agriculture POS',
+        detail: 'An Agriculture POS (Point of Sale) System is a specialized software solution designed to streamline sales, inventory, and customer management for agricultural input suppliers and farm product retailers. It enables businesses to efficiently manage the sale of seeds, fertilizers, pesticides, tools, and farming equipment while tracking stock levels, purchase history, and vendor interactions in real time.',
+        img: 'https://cdn.dribbble.com/userupload/13712952/file/original-ee27cd26da0958f7890ce0c8bfdb57e3.png?resize=1024x768&vertical=center',
+        link: 'http://example.com/project1',
+    },
+    {
+        id: 3,
+        title: 'Online Examination Platform',
+        detail: 'Tools for administrators or instructors to create exams, define questions, set time limits, and configure scoring.',
+        img: 'https://examonline.in/wp-content/uploads/2021/11/blog1.png',
+    }
+]
 </script>
