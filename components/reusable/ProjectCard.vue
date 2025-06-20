@@ -46,6 +46,4 @@ const props = withDefaults(defineProps<{
 /**
 * End::Set event trigger to parent component
 */
-
-console.log(props.data)
 </script>

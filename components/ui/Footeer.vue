@@ -46,6 +46,7 @@
                     <ULink
                         :key="idx"
                         :to="item.to"
+                        target="__blank"
                         active-class="text-black rounded-full after:w-full"
                         class="group relative uppercase text-[.9rem] dark:after:bg-white group after:left-0 pb-1 flex rounded-full transition after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:w-0 group-hover:after:w-full"
                         inactive-class="hover:after:w-full">
