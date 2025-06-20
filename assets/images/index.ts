@@ -12,6 +12,13 @@ import Exam5 from '../images/projects/exam_image/exam_image5.png';
 import Exam6 from '../images/projects/exam_image/exam_image6.png';
 import Exam7 from '../images/projects/exam_image/exam_image7.png';
 import Exam8 from '../images/projects/exam_image/exam_image8.png';
+
+//pin point
+import HomePagePinpoint from '../images/projects/pinpoint/homepage.png';
+import MyImage1 from '../images/hoodie.jpg';
+import MyImage2 from '../images/me.jpg';
+import MyImage3 from '../images/hat.jpg';
+import MyImage4 from '../images/school_uniform.jpg'
 export {
     UserImage,
     AtAngkorWat,
@@ -23,5 +30,10 @@ export {
     Exam5,
     Exam6,
     Exam7,
-    Exam8
+    Exam8,
+    MyImage1,
+    MyImage2,
+    MyImage3,
+    MyImage4,
+    HomePagePinpoint
 }

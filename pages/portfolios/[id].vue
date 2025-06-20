@@ -1,6 +1,19 @@
 <template>
     <div
         class="w-full  pb-[50px] md:mt-[40px] gap-6">
+        <div class="w-full pb-[20px]">
+             <UButton
+                @click.prevent="$router.back()"
+                variant="soft"
+                color="white"
+                class="group text-[1rem] hover:underline cursor-pointer">
+                <UIcon  
+                    name="material-symbols-light:arrow-back-ios-new-rounded"
+                    class="w-5 h-5  group-hover:-translate-x-2 transition">
+                </UIcon>
+                Back
+            </UButton>
+        </div>
         <div
             v-if="!project || !project.policy"
             class="w-full h-fitn flex flex-col items-center justify-center">
@@ -40,7 +53,7 @@
         </div>
         <div 
             v-else
-            class="w-full h-[70vh] flex items-center flex-col rounded-md gap-3 justify-center bg-gray-100">
+            class="w-full h-[70vh] p-6 flex items-center flex-col rounded-md gap-3 justify-center bg-gray-100">
             <h3
                 class="text-2xl text-black">
                 Per company policy, project images cannot be shown publicly.
@@ -114,7 +127,8 @@ import {
     Exam5,
     Exam6,
     Exam7,
-    Exam8 
+    Exam8,
+    HomePagePinpoint
 } from '~/assets/images';
 
 const route = useRoute();
@@ -127,14 +141,22 @@ const slideshow_CurrentIndex = ref<number>(0);
 const projects = [
     {
         id: '1',
-        title: 'JS Express Delivery Admin',
-        detail: 'This strongly suggests that the application is a web-based administrative interface for managing an express delivery service.',
+        title: 'JS Express Delivery Admin Application',
+        detail: 'This strongly suggests that the application is a web-based administrative interface for managing an express delivery service. in Cambodia',
         img: 'https://cdn.dribbble.com/userupload/16072864/file/original-75fa6cf2feb9be53365f225615c3aecd.png?resize=400x0',
         link: 'http://example.com/project1',
         policy: 'true'
     },
     {
         id: '2',
+        title: 'Agriculture POS',
+        detail: 'An Agriculture POS (Point of Sale) System is a specialized software solution designed to streamline sales, inventory, and customer management for agricultural input suppliers and farm product retailers. It enables businesses to efficiently manage the sale of seeds, fertilizers, pesticides, tools, and farming equipment while tracking stock levels, purchase history, and vendor interactions in real time.',
+        img: 'https://cdn.dribbble.com/userupload/13712952/file/original-ee27cd26da0958f7890ce0c8bfdb57e3.png?resize=1024x768&vertical=center',
+        link: 'http://example.com/project1',
+        policy: 'true'
+    },
+    {
+        id: '3',
         title: 'Comprehensive Online Examination Platform',
         detail: 'Tools for administrators or instructors to create exams, define questions, set time limits, and configure scoring.',
         img: 'https://examonline.in/wp-content/uploads/2021/11/blog1.png',
@@ -152,11 +174,11 @@ const projects = [
         policy: false
     },
     {
-        id: '3',
+        id: '4',
         title: 'PinPoint: Intelligent Local Place Recommendation Engine',
         detail: 'The experience was very pleasant. Communication was clear, and the process was efficient. I would recommend it to others. Good quality and friendly service. A few minor issues but nothing that impacted the overall positive experience.',
-        img: 'https://cdn.dribbble.com/userupload/15231300/file/original-d1207f24364f1573c96e9e81a732e342.png?format=webp&resize=400x300&vertical=center',
-        link: 'http://example.com/project3',
+        img: HomePagePinpoint,
+        link: 'https://ecom-web-delta.vercel.app/',
         policy: false
     }
 ];
@@ -197,7 +219,6 @@ onMounted(() => {
     setTimeout(() => {
         project.value = projects.find(p => p.id === projectId);
         pending.value = false;
-        console.log(project.value)
     }, 500);
 });
 </script>
