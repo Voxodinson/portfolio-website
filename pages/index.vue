@@ -45,7 +45,7 @@
                 </span> 
                 an 
                 <span class=" font-semibold">
-                    Web Development
+                    Web Developer
                 </span> 
                 based in Cambodia.
             </p>
@@ -67,7 +67,7 @@
             <div 
                 class="w-full flex items-center justify-center">
                 <ULink
-                    to=""
+                    to="./portfolio"
                     class="flex items-center gap-3 text-[1.2rem] underline mt-12">
                     See more
                     <UIcon

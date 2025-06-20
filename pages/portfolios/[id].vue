@@ -1,12 +1,13 @@
 <template>
     <div
         class="w-full  pb-[50px] md:mt-[40px] gap-6">
-        <div class="w-full pb-[20px]">
+        <div 
+            class="w-full pb-[20px]">
              <UButton
                 @click.prevent="$router.back()"
                 variant="soft"
                 color="white"
-                class="group text-[1rem] hover:underline cursor-pointer">
+                class="group text-[1rem] dark:bg-white bg-gray-700 bg-opacity-10 hover:bg-opacity-20 text-black hover:underline cursor-pointer">
                 <UIcon  
                     name="material-symbols-light:arrow-back-ios-new-rounded"
                     class="w-5 h-5  group-hover:-translate-x-2 transition">
