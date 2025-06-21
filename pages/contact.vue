@@ -160,7 +160,8 @@
                         icon="ri:send-plane-fill"
                         :padded="false"
                         class="bg-black dark:bg-white py-2 px-3 text-white dark:text-black"
-                        :loading="isLoading" :disabled="isLoading" />
+                        :loading="isLoading" 
+                        :disabled="isLoading" />
                 </div>
             </form>
         </div>
@@ -168,28 +169,31 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { 
+    ref 
+} from 'vue';
 import emailjs from '@emailjs/browser';
 
 definePageMeta({
     colorMode: 'light'
 });
+
 const social_media = [
     {
         icon: 'uil:facebook-f',
-        to: ''
+        to: 'https://web.facebook.com/hour.479235'
     },
     {
         icon: 'mingcute:instagram-line',
-        to: ''
+        to: 'https://www.instagram.com/ig.hour/'
     },
     {
         icon: 'mdi:telegram',
-        to: ''
+        to: 'https://t.me/OuthMenghour'
     },
     {
         icon: 'mdi:github',
-        to: ''
+        to: 'https://github.com/Voxodinson'
     },
 ];
 
@@ -202,13 +206,13 @@ const formData = ref({
     message: ''
 });
 
-const isLoading = ref(false);
-const successMessage = ref('');
-const errorMessage = ref('');
+const isLoading: Ref<boolean> = ref<boolean>(false);
+const successMessage:Ref<string | null> = ref<string | null>('');
+const errorMessage: Ref<string | null> = ref<string | null>('');
 
-const serviceID = 'service_3ige9zk';
-const templateID = 'template_n72zprr';
-const publicKey = 'a4wxbYdyVmnoiMbYY'; 
+const serviceID: string = 'service_3ige9zk';
+const templateID: string = 'template_n72zprr';
+const publicKey: string = 'a4wxbYdyVmnoiMbYY'; 
 
 const handleSubmit = async () => {
     isLoading.value = true;
